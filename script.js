@@ -4,6 +4,23 @@
 
 // BANKIST APP
 
+//Instruções
+
+console.log(
+  'As contas que podem ser acessadas são Tom Fuzer e Mark Zuckerberg'
+);
+console.log('Para acessar a conta Tom Fuzer, user: tf e PIN: 1111');
+console.log('Para acessara aa conta Mark Zuckerberg: user: mz e PIN: 2222');
+console.log(
+  'Para simular um login em um sistema bancário, o usuário é deslogado após 1 min.'
+);
+console.log(
+  'É possível usar a operação de transferência entre as contas tf e mz'
+);
+console.log(
+  'A regra para solicitar empréstimo é que existe na conta um deposito com valor 10% ou maior do que o valor do empréstimo solicitado'
+);
+
 /////////////////////////////////////////////////
 // Data
 
@@ -30,7 +47,7 @@ const account1 = {
 };
 
 const account2 = {
-  owner: 'Jessica Davis',
+  owner: 'Mark Zuckerberg',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
@@ -230,11 +247,11 @@ btnLogin.addEventListener('click', function (event) {
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
-  console.log(currentAccount);
+  // console.log(currentAccount);
 
   //Optional chaining
   if (currentAccount?.pin === +inputLoginPin.value) {
-    console.log('login');
+    // console.log('login');
     //Display UI and msg
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(' ')[0]
